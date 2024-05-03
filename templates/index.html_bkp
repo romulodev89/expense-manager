@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Despesas</title>
+</head>
+<body>
+    <h1>Gerenciador de Despesas</h1>
+    <form method="post">
+        <label for="description">Descrição:</label>
+        <input type="text" id="description" name="description" required><br>
+        <label for="amount">Valor:</label>
+        <input type="number" id="amount" name="amount" required><br>
+        <label for="category">Categoria:</label>
+        <select id="category" name="category" required>
+            <option value="Alimentação">Alimentação</option>
+            <option value="Transporte">Transporte</option>
+            <option value="Moradia">Moradia</option>
+            <option value="Lazer">Lazer</option>
+            <option value="Outros">Outros</option>
+        </select><br>
+        <button type="submit">Adicionar Despesa</button>
+    </form>
+    <h2>Despesas</h2>
+    <ul>
+        {% for expense in expenses %}
+            <li>{{ expense.description }} - R$ {{ expense.amount }} ({{ expense.category }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
