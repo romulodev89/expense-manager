@@ -1,7 +1,5 @@
 # Gerenciador de Despesas
 
-![Gerenciador de Despesas](https://via.placeholder.com/800x400)
-
 Um aplicativo simples para acompanhar despesas pessoais, onde os usuários podem adicionar e categorizar despesas e visualizar relatórios.
 
 ## Funcionalidades
